@@ -23,4 +23,9 @@ public class Fitxa {
     public void setTitol(String titol) {
         this.titol = titol;
     }
+
+    public String visualitzar(){
+        return "Referencia: " + this.getReferencia() + "\n" +
+                "Titol: " + this.getTitol() + "\n";
+    }
 }
