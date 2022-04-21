@@ -3,7 +3,7 @@ package com.company.entities;
 public class Volum extends Obra{
     private short nro;
 
-    public Volum(String referencia, String titol, String autor, int nrePags, short nro) {
+    public Volum(String referencia, String titol, String autor, int nrePags, int nro) {
         super(referencia, titol, autor, nrePags);
         this.setNro(nro);
     }
@@ -12,13 +12,13 @@ public class Volum extends Obra{
         return nro;
     }
 
-    public void setNro(short nro) {
-        this.nro = nro;
+    public void setNro(int nro) {
+        this.nro = (short) nro;
     }
 
     @Override
     public String visualitzar(){
-        return super.visualitzar() + "\n" +
+        return super.visualitzar() +
                 "Numero de volum" + this.getNro() + "\n";
     }
 }
